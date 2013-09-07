@@ -1,0 +1,22 @@
+<div id="content">
+
+  <% @images.each do |image| %>
+    <div class="mosaic-block bar">
+
+      <a target="_blank" class="mosaic-overlay">
+        <div class="details">
+          <h4><%= image.title %></h4>
+          <p><%= image.details %></p>
+        </div>
+      </a>
+      <div class="mosaic-backdrop">
+        <%= image_tag(image.image(:high))%>
+      </div>
+
+    </div>
+  <% end %>
+
+  <div class="clearfix"></div>
+</div>
+
+
